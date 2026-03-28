@@ -1,0 +1,19 @@
+modules:
+  jira:projectPage:
+    - key: forge-jira-starter-project-page
+      resource: main
+      resolver:
+        function: resolver
+      title: forge-jira-starter
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/ui/build
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/4b7b0b81-e1d2-4e90-b3c5-154ddfdad938
